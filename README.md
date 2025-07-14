@@ -3,6 +3,8 @@
 Bienvenido a **Sweet Mett**, una tienda web de chocolates artesanales desarrollada como proyecto académico por estudiantes de la Universidad UTEPSA. Este sistema permite a los usuarios explorar, comprar y administrar productos de chocolatería de alta calidad, combinando innovación, tradición y tecnología.
 
 ---
+![PHP](https://img.shields.io/badge/PHP-7.4-blue?logo=php)
+![Estado](https://img.shields.io/badge/Estado-Completo-brightgreen)
 
 ## 🚀 Características principales
 
