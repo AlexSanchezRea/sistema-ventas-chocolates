@@ -23,25 +23,27 @@ Este sistema combina una tienda virtual moderna, un panel administrativo complet
 ## 🖼️ Capturas de Pantalla
 
 ### Pantalla de Inicio
-![Pantalla de Inicio](assets/screenshots/inicio.png)
+![Pantalla de Inicio](assets/inicio.png)
 
 ### Historia
-![Historia](assets/screenshots/historia.png)
+![Historia](assets/nosotros.png)
 
 ### Galería
-![Galería](assets/screenshots/galeria.png)
+![Galería](assets/galeria.png)
 
 ### Catálogo
-![Catálogo](assets/screenshots/catalogo.png)
+![Catálogo](assets/catalogo.png)
 
 ### Mini Juego
-![Mini Juego](assets/screenshots/juego.png)
+![Mini Juego](assets/juego.png)
+![Juego Iniciado](assets/juegoplay.png)
+
 
 ### Login
-![Login](assets/screenshots/login.png)
+![Login](assets/login.png)
 
 ### Panel Administrador
-![Administrador](assets/screenshots/admin.png)
+![Administrador](assets/admin.png)
 ---
 
 ## 🛠️ Tecnologías Utilizadas
