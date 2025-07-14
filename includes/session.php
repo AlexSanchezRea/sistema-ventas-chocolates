@@ -36,11 +36,11 @@ function getCurrentUserRole() {
 // Función para verificar acceso a rutas protegidas
 function checkAccessRights() {
     $currentPath = $_SERVER['PHP_SELF'];
-    $basePath = '/sweetmett'; // Ajusta esto según tu configuración
+    $basePath = '/WEBCHOCOLATECLIENTEADMIN'; // <-- Ya corregido
     
-    // Si no está logueado y no está en login o registro
+    // Permitir acceso público a catalogo.php
     if (!isLoggedIn() && 
-        !in_array(basename($currentPath), ['login.php', 'registro.php', 'index.php'])) {
+        !in_array(basename($currentPath), ['login.php', 'registro.php', 'index.php', 'catalogo.php'])) {
         header('Location: ' . $basePath . '/login.php');
         exit();
     }
@@ -70,7 +70,7 @@ function checkAccessRights() {
 
 // Función para redirigir según el rol
 function redirectBasedOnRole() {
-    $basePath = '/sweetmett'; // Ajusta esto según tu configuración
+    $basePath = '/WEBCHOCOLATECLIENTEADMIN'; // Ajusta esto según tu configuración
     
     if (!isLoggedIn()) {
         header('Location: ' . $basePath . '/login.php');
