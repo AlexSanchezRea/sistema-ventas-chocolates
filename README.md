@@ -1,39 +1,60 @@
-# Sweet Mett - Tienda de Chocolates Artesanales
+# 🍫 Sweet Mett - Web Chocolate Cliente & Admin
 
-Bienvenido a **Sweet Mett**, una tienda web de chocolates artesanales desarrollada como proyecto académico por estudiantes de la Universidad UTEPSA. Este sistema permite a los usuarios explorar, comprar y administrar productos de chocolatería de alta calidad, combinando innovación, tradición y tecnología.
+Bienvenido a **Sweet Mett**, una plataforma web integral para la venta y administración de chocolates artesanales, desarrollada como proyecto académico por **Alex Jhail Sanchez Rea**, estudiante de Ingeniería de Sistemas en UTEPSA.
 
-
----
-
-## 🚀 Características principales
-
-- **Catálogo de productos**: Visualiza chocolates artesanales con imágenes, precios y descripciones.
-- **Galería interactiva**: Sección visual con animaciones y smooth scroll.
-- **Carrito de compras**: Añade productos y gestiona tu pedido (solo para usuarios registrados).
-- **Sistema de usuarios**: Registro, inicio de sesión y roles (cliente y administrador).
-- **Panel de administración**: Gestión de productos, usuarios y pedidos (solo para administradores).
-- **Responsive Design**: Interfaz adaptada a dispositivos móviles y escritorio.
-- **Animaciones y experiencia de usuario**: Uso de AOS, scroll suave, menú móvil y botones flotantes.
-- **Juego interactivo**: Minijuego incluido para mejorar la experiencia del usuario.
-- **Contacto rápido**: Botón de WhatsApp y formulario de suscripción a ofertas.
+Este sistema combina una tienda virtual moderna, un panel administrativo completo y una sección interactiva tipo videojuego, todo en un entorno responsivo y amigable.
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## ✨ Características Destacadas
 
-- **Frontend**:  
-  - HTML5, CSS3 (Tailwind CSS, estilos personalizados)
-  - JavaScript (vanilla, AOS, FontAwesome)
-- **Backend**:  
-  - PHP 8+
-  - MySQL (gestión de usuarios, productos y pedidos)
-- **Otros**:  
-  - XAMPP (entorno local)
-  - Google Fonts
+- **Registro y autenticación de usuarios** (clientes y administradores)
+- **Catálogo visual de productos** con imágenes y descripciones
+- **Carrito de compras** para clientes registrados
+- **Panel de administración**: gestión de productos, usuarios y pedidos
+- **Mini juego interactivo** en JavaScript para mejorar la experiencia del usuario
+- **Galería multimedia** y animaciones modernas (AOS, smooth scroll)
+- **Botón de contacto rápido por WhatsApp**
+- **Diseño responsivo** para móviles y escritorio
+- **Base de datos MySQL** incluida para gestión integral
 
 ---
 
-## 📁 Estructura del proyecto
+## 🖼️ Capturas de Pantalla
+
+### Pantalla de Inicio
+![Pantalla de Inicio](assets/screenshots/inicio.png)
+
+### Historia
+![Historia](assets/screenshots/historia.png)
+
+### Galería
+![Galería](assets/screenshots/galeria.png)
+
+### Catálogo
+![Catálogo](assets/screenshots/catalogo.png)
+
+### Mini Juego
+![Mini Juego](assets/screenshots/juego.png)
+
+### Login
+![Login](assets/screenshots/login.png)
+
+### Panel Administrador
+![Administrador](assets/screenshots/admin.png)
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Frontend:** HTML5, CSS3 (Tailwind CSS), JavaScript (AOS, FontAwesome)
+- **Backend:** PHP 8+
+- **Base de Datos:** MySQL
+- **Servidor Local:** XAMPP
+- **Control de versiones:** Git
+
+---
+
+## 📁 Estructura del Proyecto
 
 ```
 WEBCHOCOLATECLIENTEADMIN/
@@ -43,68 +64,75 @@ WEBCHOCOLATECLIENTEADMIN/
 ├── cliente/              # Área privada para clientes
 ├── css/                  # Hojas de estilo (Tailwind, personalizados)
 ├── includes/             # Archivos PHP reutilizables (sesión, conexión, helpers)
-├── js/                   # Scripts JS adicionales
+├── js/                   # Scripts JS adicionales y minijuego
 ├── config/               # Configuración de base de datos
 ├── index.php             # Página principal (landing)
 ├── catalogo.php          # Catálogo de productos
 ├── login.php             # Inicio de sesión
 ├── registro.php          # Registro de usuarios
 ├── logout.php            # Cierre de sesión
-├── game.js               # Lógica del minijuego
-└── README.md             # Este archivo
+├── README.md             # Este archivo
+└── database.sql          # Script de base de datos
 ```
 
 ---
 
-## ⚙️ Instalación y ejecución local
+## 🚀 Instalación y Ejecución Local
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/tuusuario/SweetMett.git
+   git clone https://github.com/tuusuario/WEBCHOCOLATECLIENTEADMIN.git
    ```
 
-2. **Configura el entorno local:**
-   - Instala [XAMPP](https://www.apachefriends.org/) o similar.
-   - Copia la carpeta `WEBCHOCOLATECLIENTEADMIN` al directorio `htdocs` de XAMPP.
+2. **Copia la carpeta al directorio de tu servidor local (XAMPP):**
+   ```bash
+   # Ejemplo en Windows
+   C:\xampp\htdocs\WEBCHOCOLATECLIENTEADMIN
+   ```
 
 3. **Configura la base de datos:**
-   - Crea una base de datos MySQL (por ejemplo, `sweetmett`).
-   - Importa el archivo SQL proporcionado (si existe) o crea las tablas según los scripts en `config/database.php`.
+   - Crea una base de datos en MySQL (por ejemplo, `sweetmett`).
+   - Importa el archivo `database.sql` usando phpMyAdmin o la terminal.
 
-4. **Configura la conexión:**
-   - Edita `config/database.php` con tus credenciales de MySQL.
+4. **Configura la conexión en `config/database.php`** con tus credenciales de MySQL.
 
-5. **Inicia el servidor:**
-   - Abre XAMPP y activa Apache y MySQL.
-   - Accede a [http://localhost/WEBCHOCOLATECLIENTEADMIN](http://localhost/WEBCHOCOLATECLIENTEADMIN) en tu navegador.
+5. **Inicia Apache y MySQL en XAMPP**.
 
----
-
-## 👤 Roles de usuario
-
-- **Cliente:** Puede registrarse, iniciar sesión, ver catálogo, agregar al carrito y realizar pedidos.
-- **Administrador:** Acceso a panel de administración para gestionar productos, usuarios y pedidos.
+6. **Abre tu navegador en:**
+   ```
+   http://localhost/WEBCHOCOLATECLIENTEADMIN
+   ```
 
 ---
 
-## 📸 Capturas de pantalla
+## 👨‍💻 Sobre el Autor
 
-> Puedes agregar aquí imágenes del home, catálogo, galería, panel admin, etc.
-
----
-
-## 📄 Créditos
-
-- Proyecto desarrollado por estudiantes de la Universidad UTEPSA, Santa Cruz de la Sierra, Bolivia.
-- Inspirado en la pasión por el chocolate y la innovación tecnológica.
+**Alex Jhail Sanchez Rea**  
+Estudiante de Ingeniería de Sistemas - UTEPSA  
+Apasionado por el desarrollo web, la innovación y la tecnología educativa.
 
 ---
 
-## 📝 Licencia
+## 📈 Mejoras Futuras
 
-Este proyecto es de uso académico y educativo. Puedes modificarlo y adaptarlo según tus necesidades.
+- Validaciones avanzadas y seguridad (hashing, protección contra inyecciones SQL)
+- Gestión de stock y reportes
+- Integración de pasarela de pagos
+- Notificaciones por correo electrónico
+- Refactorización a arquitectura MVC
 
 ---
 
-¡Gracias por visitar Sweet Mett!  
-Si te gusta el proyecto, no dudes en darle una estrella ⭐ en GitHub.
+## 📄 Licencia
+
+Proyecto académico y educativo.  
+Puedes modificarlo y adaptarlo para tus propios fines, citando al autor.
+
+---
+
+¡Gracias por visitar este dulce proyecto!  
+Si te gusta, no dudes en darle una ⭐ en GitHub.
+
+---
+
+> _“El chocolate es felicidad que se puede comer.”_
