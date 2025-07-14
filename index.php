@@ -233,7 +233,7 @@ require_once 'includes/session.php';
             <div class="hidden md:flex items-center space-x-6 font-medium">
                 <a href="#nosotros" class="hover:text-gold transition duration-300">Nosotros</a>
                 <a href="#productos" class="hover:text-gold transition duration-300">Productos</a>
-                <a href="#galeria" class="hover:text-gold transition duration-300">Galería</a>
+                <a href="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? '#galeria' : 'index.php#galeria'; ?>" class="hover:text-gold transition duration-300">Galería</a>
                 <a href="catalogo.php" class="hover:text-gold transition duration-300">Catálogo</a>
            
                 <?php if (isLoggedIn()): ?>
@@ -274,7 +274,7 @@ require_once 'includes/session.php';
         <div class="mobile-menu hidden md:hidden bg-chocolate-dark/95 py-3 px-6">
             <a href="#nosotros" class="block py-2 hover:text-gold font-medium">Nosotros</a>
             <a href="#productos" class="block py-2 hover:text-gold font-medium">Productos</a>
-            <a href="#galeria" class="block py-2 hover:text-gold font-medium">Galería</a>
+            <a href="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? '#galeria' : 'index.php#galeria'; ?>" class="block py-2 hover:text-gold font-medium">Galería</a>
             <a href="catalogo.php" class="block py-2 hover:text-gold font-medium">Catálogo</a>
             <a href="jueguito.php" class="block py-2 hover:text-gold font-medium">Jueguito</a>
             <?php if (isLoggedIn()): ?>
@@ -416,7 +416,7 @@ require_once 'includes/session.php';
     </section>
 
     <!-- Galería Section -->
-    <section class="py-20" style="background-color: #3B2213;">
+    <section id="galeria" class="py-20" style="background-color: #3B2213;">
         <div class="container mx-auto px-6">
             <h2 class="font-pacifico text-4xl mb-16 text-center text-white">Galería</h2>
 
@@ -527,15 +527,19 @@ require_once 'includes/session.php';
         // Smooth scroll para los enlaces de navegación
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Cerrar menú móvil si está abierto
-                    document.querySelector('.mobile-menu').classList.add('hidden');
+                const href = this.getAttribute('href');
+                // Solo prevenir si el enlace es un hash y estamos en index.php
+                if (window.location.pathname.endsWith('index.php') && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Cerrar menú móvil si está abierto
+                        document.querySelector('.mobile-menu').classList.add('hidden');
+                    }
                 }
             });
         });
@@ -606,6 +610,17 @@ require_once 'includes/session.php';
                 });
             });
         });
+
+        // Cerrar menú móvil al hacer clic en cualquier enlace
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        // Si NO es un hash, cerrar menú y dejar que navegue normalmente
+        if (!href.startsWith('#')) {
+            document.querySelector('.mobile-menu').classList.add('hidden');
+        }
+    });
+});
     </script>
 </body>
 
