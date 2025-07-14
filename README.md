@@ -1,7 +1,7 @@
 # Sweet Mett - Tienda de Chocolates Artesanales
 
 Bienvenido a **Sweet Mett**, una tienda web de chocolates artesanales desarrollada como proyecto académico por estudiantes de la Universidad UTEPSA. Este sistema permite a los usuarios explorar, comprar y administrar productos de chocolatería de alta calidad, combinando innovación, tradición y tecnología.
-![Uploading deadpool-arte-digital_3840x2160_xtrafondos.com.jpg…]()
+
 
 ---
 
